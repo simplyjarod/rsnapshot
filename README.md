@@ -6,8 +6,8 @@ Please, **download _all files_ before executing any script**. There are several 
 wget https://github.com/simplyjarod/rsnapshot/archive/master.zip
 unzip master.zip
 cd rsnapshot-master
-chmod u+x *.sh -R
-chmod u+x *.py -R
+chmod u+x *.sh -R # it will be useful to add execution permissions to bash scripts
+chmod u+x *.py -R # it will be useful to add execution permissions to Python scripts
 ```
 
 
