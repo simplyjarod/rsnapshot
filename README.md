@@ -6,8 +6,7 @@ Please, **download _all files_ before executing any script**. There are several 
 wget https://github.com/simplyjarod/rsnapshot/archive/master.zip
 unzip master.zip
 cd rsnapshot-master
-chmod u+x *.sh -R
-chmod u+x *.py -R
+chmod u+x *.sh -R && chmod u+x *.py -R
 ```
 
 
@@ -23,7 +22,7 @@ ssh-keygen -t rsa
 ```
 La clave pública estará ubicada en /home/user_name/.ssh/id_rsa.pub (o el nombre que le hayas dado).  
 
-**2. Installation (rsync and rsnapshot)**  
+**2. Installation (rsync and rsnapshot)**  
 Run `./setup.sh` as **root** from the folder this file is placed.
 
 **3. Configuration**  
