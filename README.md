@@ -1,4 +1,4 @@
-# rsnapshot installation and configuration
+# rsnapshot installation and configuration for CentOS
 _with interactive host adding/removing Python script_ ;)
 
 Please, **download _all files_ before executing any script**. There are several dependencies between them. You can use:
@@ -6,12 +6,12 @@ Please, **download _all files_ before executing any script**. There are several 
 wget https://github.com/simplyjarod/rsnapshot/archive/master.zip
 unzip master.zip
 cd rsnapshot-master
-chmod u+x *.sh -R # it will be useful to add execution permissions to bash scripts
-chmod u+x *.py -R # it will be useful to add execution permissions to Python scripts
+chmod u+x *.sh -R
+chmod u+x *.py -R
 ```
 
 
-## Configuración incial (una sola vez)
+## Initial setup
 **1. Debemos crear/obtener las claves RSA en el servidor**  
 Necesitamos la clave pública del servidor donde se vayan a almacenar los backups.  
 Para ello:  
@@ -21,16 +21,16 @@ ssh-keygen -t rsa
 #(si ya existiesen nos preguntará si queremos sobreescribirlas. Diremos que NO)
 #(NO escribiremos ninguna passphrase para crearlas)
 ```
-**2. Instalación de rsnapshot**  
+La clave pública estará ubicada en /home/user_name/.ssh/id_rsa.pub (o el nombre que le hayas dado).  
 
-**3. Configurar rsnapshot**  
+**2. Installation (rsync and rsnapshot)**  
+Run `./setup.sh` as **root** from the folder this file is placed.
+
+**3. Configuration**  
 Editaremos el fichero /etc/rsnapshot.conf  
 Atención a los requisitos del fichero: Finalizar directorios con '/' y usar tabuladores en vez de espacios.
 
 
-## Configurar (añadir o eliminar) una copia de seguridad remota
-Run `./set-host.py` as **root** from the folder this file is placed.
-
-This script will execute:
-1.  
-2.  
+## Adding or removing a backup
+Run `./set-host.py` as **root** from the folder this file is placed.  
+Please, follow the interactive dialog asking you what you want to do ;)
