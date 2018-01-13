@@ -21,6 +21,7 @@ ssh-keygen -t rsa
 #(NO escribiremos ninguna passphrase para crearlas)
 ```
 La clave pública estará ubicada en /home/user_name/.ssh/id_rsa.pub (o el nombre que le hayas dado).  
+Es necesario copiar la clave pública al directorio donde se encuentre el fichero set-host.py y nombrarla como **backup.pub**  
 
 **2. Installation (rsync and rsnapshot)**  
 Run `./setup.sh` as **root** from the folder this file is placed.
