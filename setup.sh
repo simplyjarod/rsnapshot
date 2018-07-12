@@ -26,6 +26,7 @@ else
 
 	yum install rsnapshot -y # Instalacion de rsnapshot
 	sed -i "s|#cmd_cp		/usr/bin/cp|cmd_cp		/usr/bin/cp|g" /etc/rsnapshot.conf
+	sed -i "s|#cmd_ssh	/usr/bin/ssh|cmd_ssh	/usr/bin/ssh|g" /etc/rsnapshot.conf
 	
 	mkdir /.snapshots
 	
